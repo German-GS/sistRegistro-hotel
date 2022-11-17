@@ -34,7 +34,7 @@ function llenarForm(persona){
     const listaPersona=document.querySelector(".list-group")// Puede tener ingresado una clase, id o tag de html
     persona.forEach(elemento=>{
         const li=document.createElement('li')
-        li.classList.add('list-group-item')
+        li.classList.add('list-group-item')// Agrego una clase a un elemento creado por JS 
         li.textContent=elemento
         listaPersona.appendChild(li)
         
