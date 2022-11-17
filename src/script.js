@@ -1,4 +1,9 @@
 var getData = function(){
+    persona=[]
+    persona.forEach(element => {
+        persona=element
+        
+    });
     
     const name= document.getElementById("name").value 
     const last_name=document.getElementById("last_name").value 
@@ -6,9 +11,8 @@ var getData = function(){
     const email=document.getElementById("email").value
     const numCel = document.getElementById("num_celular").value
     validation()
-    console.log(name, " ", last_name, "se quedaran ", number_nights, "y se puede contactar al numero ", numCel)
+    console.log("La persona ", name)
     cleanForm()
-
 }
 
 function cleanForm(){
@@ -16,6 +20,12 @@ function cleanForm(){
     document.getElementById("last_name").value ="" 
     document.getElementById("num_Nights").value =""
 }
+/* 
+function llenarPersona(name, last_Name, num_Nights, email, numCel){
+
+    persona=[name, last_Name, num_Nights, email, numCel]
+    return persona[0]
+} */
 
 
 function validation(){
@@ -32,4 +42,9 @@ function validation(){
     }
     
 }
+
+const list_clients=document.querySelector("ul")
+const li=document.createElement('li')
+li.textContent= llenarPersona()
+list_clients.appendChild(li)
 

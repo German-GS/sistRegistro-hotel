@@ -8,10 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="/src/script.js"></script>
+    <link rel="stylesheet" href="/src/style.css">
     <title>Sistema de reserva de Hotel</title>
 </head>
 <body>
-    <div class="container-fluid text-center">
+    <div class="container-fluid ">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Hotel el paso</a>
@@ -39,13 +40,11 @@
                         <a class="nav-link disabled">Disabled</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
                 </div>
             </div>
         </nav>
+    </div>
+    <div class="container-fluid text-center form-clients">
         <div class="row form-clients">
             <h3>Registro cliente</h3>
             <form class="row" action="" id="form-clientes">
@@ -66,10 +65,24 @@
                     <input type="number" class="form-control" required id="num_Nights" placeholder="Noches">
                 </div>
                 <div class="col-2 text-start">
-                    <button type="button" class="btn btn-success" onclick="getData()">Enviar</button>
+                    <button type="button" class="btn btn-success button-success" onclick="getData()">Enviar</button>
                 </div>
                 
             </form>
+        </div>
+
+    </div>
+    <div class="container-fluid list_clients">
+        <h3>Huespedes registrados</h3>
+        <div class="row">
+            <div class="col">
+                <ul class="list-group">
+                    
+                </ul>
+
+            </div>
+
+
         </div>
 
     </div>
