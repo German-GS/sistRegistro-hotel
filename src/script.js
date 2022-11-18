@@ -31,21 +31,21 @@ function validation(persona){
 }
 
 function mostraDatos(persona){ // Puede tener ingresado una clase, id o tag de html
-    listaPersona=document.querySelector(".col-sm-4")
+    var listaPersona=document.querySelector(".col-sm-4")
 //==================================================
-    card= document.createElement('div')
+    var card= document.createElement('div')
     card.classList.add('card')
-    divCardBody= document.createElement('div')
+    var divCardBody= document.createElement('div')
     divCardBody.classList.add('card-body')
 //===================================================
-    titleCard=document.createElement('h5')
+    var titleCard=document.createElement('h5')
     titleCard.classList.add('card-title')
-    textCont=document.createTextNode(persona[0]+ " "+ persona[1])
+    var textCont=document.createTextNode(persona[0]+ " "+ persona[1])
     titleCard.appendChild(textCont)
 //==================================================
-    contetCard=document.createElement('p')
+    var contetCard=document.createElement('p')
     contetCard.classList.add('card-text')
-    textContCard=document.createTextNode("Datos contacto: " + persona[3] + " " + persona[2] + " se quedara "+ persona[4]+ " noches")
+    var textContCard=document.createTextNode("Datos contacto: " + persona[3] + " " + persona[2] + " se quedara "+ persona[4]+ " noches")
     contetCard.appendChild(textContCard)
 //=================================================
     divCardBody.appendChild(titleCard)
