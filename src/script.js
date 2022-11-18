@@ -1,7 +1,6 @@
-
 var getData = function(){ //Captura la informacion del formulario y la guarda en un array
     persona=[]
-    for (var i = 0; i <=4; i++){
+    for (var i = 0; i <=5; i++){
         persona[i]=document.getElementById("persona"+(i+1)).value
     }
     validation(persona)
@@ -9,9 +8,19 @@ var getData = function(){ //Captura la informacion del formulario y la guarda en
         console.log(element)
         
     });
+
+    var days=calcData(persona)
+    console.log(days)
     mostraDatos(persona)
 
     cleanForm(persona)
+}
+
+function calcData(persona){
+    dateCheckIn = new Date(persona[4])
+    dateChechOut = new Date(persona[5])
+    difDays = dateCheckIn.getTime() - dateChechOut.getTime()
+    return Math.round(difDays / (1000*60*60*24))
 }
 
 function cleanForm(persona){ // Limpia el formulario 
@@ -61,6 +70,3 @@ function mostraDatos(persona){
 
         
 }
-
-
-
