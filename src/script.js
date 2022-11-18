@@ -9,17 +9,17 @@ var getData = function(){ //Captura la informacion del formulario y la guarda en
         
     });
 
-    var days=calcData(persona)
+    var days=calcDays(persona)
     console.log(days)
     mostraDatos(persona)
 
     cleanForm(persona)
 }
 
-function calcData(persona){
+function calcDays(persona){
     dateCheckIn = new Date(persona[4])
     dateChechOut = new Date(persona[5])
-    difDays = dateCheckIn.getTime() - dateChechOut.getTime()
+    difDays = dateChechOut.getTime()- dateCheckIn.getTime()
     return Math.round(difDays / (1000*60*60*24))
 }
 
