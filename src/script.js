@@ -30,28 +30,33 @@ function validation(persona){
 
 }
 
-function mostraDatos(persona){ // Puede tener ingresado una clase, id o tag de html
-    var listaPersona=document.querySelector(".col-sm-4")
-//==================================================
-    var card= document.createElement('div')
+function mostraDatos(persona){ 
+
+    cardsCliente =document.querySelector('.card-clients')// Puede tener ingresado una clase, id o tag de html
+//=============================================================
+    gridCards=document.createElement('div')
+    card=document.createElement('div')
+    cardBody=document.createElement('div')
+    gridCards.classList.add('col-sm-4')
     card.classList.add('card')
-    var divCardBody= document.createElement('div')
-    divCardBody.classList.add('card-body')
-//===================================================
-    var titleCard=document.createElement('h5')
-    titleCard.classList.add('card-title')
-    var textCont=document.createTextNode(persona[0]+ " "+ persona[1])
-    titleCard.appendChild(textCont)
-//==================================================
-    var contetCard=document.createElement('p')
-    contetCard.classList.add('card-text')
-    var textContCard=document.createTextNode("Datos contacto: " + persona[3] + " " + persona[2] + " se quedara "+ persona[4]+ " noches")
-    contetCard.appendChild(textContCard)
-//=================================================
-    divCardBody.appendChild(titleCard)
-    divCardBody.appendChild(contetCard)
-    card.appendChild(divCardBody)
-    listaPersona.appendChild(card)
+    cardBody.classList.add('card-body')
+//=============================================================
+    tit_h5= document.createElement('h5')
+    text_p= document.createElement('p')
+    tit_h5.classList.add('card-title')
+    text_p.classList.add('card-text')
+//============================================================
+    text_h5=document.createTextNode(persona[0] + " "+ persona[1])
+    cont_p=document.createTextNode("Datos contacto: " + persona[3] + " " + persona[2] + " se quedara "+ persona[4]+ " noches")
+//==========================================================
+    tit_h5.appendChild(text_h5)
+    text_p.appendChild(cont_p)
+    cardBody.appendChild(tit_h5)
+    cardBody.appendChild(text_p)
+    card.appendChild(cardBody)
+    gridCards.appendChild(card)
+    cardsCliente.appendChild(gridCards)
+
 
 
         
