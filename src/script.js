@@ -9,7 +9,7 @@ var getData = function(){ //Captura la informacion del formulario y la guarda en
         console.log(element)
         
     });
-    llenarForm(persona)
+    mostraDatos(persona)
 
     cleanForm(persona)
 }
@@ -30,15 +30,31 @@ function validation(persona){
 
 }
 
-function llenarForm(persona){
-    const listaPersona=document.querySelector(".list-group")// Puede tener ingresado una clase, id o tag de html
-    persona.forEach(elemento=>{
-        const li=document.createElement('li')
-        li.classList.add('list-group-item')// Agrego una clase a un elemento creado por JS 
-        li.textContent=elemento
-        listaPersona.appendChild(li)
+function mostraDatos(persona){ // Puede tener ingresado una clase, id o tag de html
+    listaPersona=document.querySelector(".col-sm-4")
+//==================================================
+    card= document.createElement('div')
+    card.classList.add('card')
+    divCardBody= document.createElement('div')
+    divCardBody.classList.add('card-body')
+//===================================================
+    titleCard=document.createElement('h5')
+    titleCard.classList.add('card-title')
+    textCont=document.createTextNode(persona[0]+ " "+ persona[1])
+    titleCard.appendChild(textCont)
+//==================================================
+    contetCard=document.createElement('p')
+    contetCard.classList.add('card-text')
+    textContCard=document.createTextNode("Datos contacto: " + persona[3] + " " + persona[2] + " se quedara "+ persona[4]+ " noches")
+    contetCard.appendChild(textContCard)
+//=================================================
+    divCardBody.appendChild(titleCard)
+    divCardBody.appendChild(contetCard)
+    card.appendChild(divCardBody)
+    listaPersona.appendChild(card)
+
+
         
-    })
 }
 
 

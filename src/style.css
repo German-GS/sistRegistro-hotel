@@ -1,10 +1,15 @@
+
 body{
-    background-color: white;
+    background-color: #0477BF;
 }
 nav{
-    background-color: #F2E205 !important;
-
+    background-color: #F2B705 !important;
 }
+
+h1, h2, h3, label{
+    color: white;
+}
+
 
 .btn-success{
     margin-top: 23px ;
