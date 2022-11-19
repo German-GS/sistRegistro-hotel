@@ -6,6 +6,10 @@ nav{
     background-color: #F2B705 !important;
 }
 
+h3{
+    margin-top: 50px;
+}
+
 h1, h2, h3, label{
     color: white;
 }
