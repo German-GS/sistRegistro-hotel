@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="/src/script.js"></script>
+    <script type="module" src="/src/script.js"></script>
     <link rel="stylesheet" href="/src/style.css">
     <title>Sistema de reserva de Hotel</title>
 </head>
@@ -32,8 +32,8 @@
             </ul>
         </div>
         </div>
-        </nav>
-    <div class="container-fluid text-start form-clients">
+    </nav>
+    <div class="container text-start form-clients">
         <div class="row form-clients">
             <h3>Registro cliente</h3>
             <form class="row form-client" action="" id="form-clientes">
@@ -56,14 +56,14 @@
                     <input type="date" class="form-control" value="2022-04-01" id="persona6">
                 </div>
                 <div class="col-2 text-start">
-                    <button type="button" class="btn btn-success button-success" onclick="getData()">Enviar</button>
+                    <button type="button" class="btn btn-success button-success">Enviar</button>
                 </div>
                 
             </form>
         </div>
 
     </div>
-    <div class="container-fluid list_clients">
+    <div class="container list_clients">
         <h3>Huespedes registrados</h3>
         <div class="row card-clients">
             
