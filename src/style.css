@@ -24,10 +24,6 @@ h3{
     margin: 12px;
 }
 
-.form-client:has(input:required)label:after{
-    content: "*";
-    color: red;
-}
 
 .col-sm-4{
     margin-top: 25px;
