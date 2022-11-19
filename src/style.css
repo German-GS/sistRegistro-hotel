@@ -1,9 +1,10 @@
 
 body{
-    background-color: #0477BF;
+    background-color: #323859;
 }
 nav{
     background-color: #F2B705 !important;
+    margin-bottom: 23px;
 }
 
 h3{
@@ -15,7 +16,7 @@ h1, h2, h3, label{
 }
 
 
-.btn-success{
+.btn, .btn-success{
     margin-top: 23px ;
 }
 
@@ -26,4 +27,8 @@ h3{
 .form-client:has(input:required)label:after{
     content: "*";
     color: red;
+}
+
+.col-sm-4{
+    margin-top: 25px;
 }
