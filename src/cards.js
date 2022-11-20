@@ -17,18 +17,56 @@ function mostraDatos(persona, days){
 //============================================================
     var text_h5=document.createTextNode(persona[0] + " "+ persona[1])
     var cont_p=document.createTextNode("Datos contacto: " + persona[3] + " " + persona[2] + " se quedara "+ days + " noches")
+//========================================================== btn
+    var divBtn=document.createElement('div')
+    divBtn.classList.add('d-grid')
+    divBtn.classList.add('gap-2')
+    divBtn.classList.add('d-md-block')
+    var btnCheckIn =document.createElement("button")
+    btnCheckIn.type="button"
+    btnCheckIn.classList.add("btn", "btn-success", "btn-sm")
+    btnCheckIn.innerHTML = "Check In"
+    var btnCheckOut =document.createElement("button")
+    btnCheckOut.type="button"
+    btnCheckOut.classList.add("btn","btn-warning", "btn-sm")
+    btnCheckOut.innerHTML = "Check Out" 
+    var btnBorrar =document.createElement("button")
+    btnBorrar.type="button"
+    btnBorrar.classList.add("btn", "btn-danger", "btn-sm")
+    btnBorrar.innerHTML = "Borrar" 
+    divBtn.appendChild(btnCheckIn)
+    divBtn.appendChild(btnCheckOut)
+    divBtn.appendChild(btnBorrar)
 //==========================================================
     tit_h5.appendChild(text_h5)
     text_p.appendChild(cont_p)
     cardBody.appendChild(tit_h5)
     cardBody.appendChild(text_p)
     card.appendChild(cardBody)
+    card.appendChild(divBtn)
     gridCards.appendChild(card)
     cardsCliente.appendChild(gridCards)
-
-
 
         
 }
 
+
+/* function createBtn(card){
+    var classBtn=["btn-succes", "btn-danger", "btn-warning"]
+    var namesBtn=["Chec In", "Chec Out", "Borrar"]
+    var btn =document.createElement("button")
+    btn.type="button"
+    btn.classList.add("btn")
+    for (var i=0; i<=2; i++) {
+        btn.classList.add(classBtn[i])
+        btn.innerHTML=namesBtn[i]
+        classBtn.forEach(element =>{
+            card.appendChild(btn)
+
+        })
+        
+        console.log(btn)
+    }
+}
+ */
 export {mostraDatos}

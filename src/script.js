@@ -9,11 +9,11 @@ function getData(){
     for (var i = 0; i <=5; i++){
         persona[i]=document.getElementById("persona"+(i+1)).value
     }
-   /*  validation(persona)
+    validation(persona)
     persona.forEach(element => {
         console.log(element)
         
-    }); */
+    });
     var days= calcDays(persona)
     mostraDatos(persona, days)
     cleanForm(persona)
