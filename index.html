@@ -38,16 +38,22 @@
             <h3>Registro cliente</h3>
             <form class="row form-client" action="" id="form-clientes">
                 <div class="col-5">
-                    <label for="" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" required id="persona1" placeholder="Nombre">
+                    <label for="" class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" required id="persona1" placeholder="Nombre y apellidos">
                     <label for="" class="form-label">Correo Electronico</label>
-                    <input type="email" class="form-control" id="persona3" placeholder="Email @">
+                    <input type="email" class="form-control" id="persona2" placeholder="Email @">
                 </div>
                 <div class="col-5">
-                    <label for="" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" required id="persona2" placeholder="Apellidos">
                     <label for="" class="form-label">Numero de celular</label>
-                    <input type="text" class="form-control" required id="persona4" placeholder="Celular">
+                    <input type="text" class="form-control" required id="persona3" placeholder="Celular">
+                    <label for="" class="form-label">Seleccione la habitacion</label>
+                    <div class="mb-3">
+                        <select class="form-select" required aria-label="select example" id="persona4">
+                            <option value="" id="persona4">Seleccione la opcion</option>
+                            <option value="1" id="persona4">Habitacion sencilla</option>
+                            <option value="2" id="persona4">Habitacion doble</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="col-2">
                     <label for="" class="form-label">Fecha de ingreso</label>

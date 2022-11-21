@@ -15,8 +15,8 @@ function mostraDatos(persona, days){
     tit_h5.classList.add('card-title')
     text_p.classList.add('card-text')
 //============================================================
-    var text_h5=document.createTextNode(persona[0] + " "+ persona[1])
-    var cont_p=document.createTextNode("Datos contacto: " + persona[3] + " " + persona[2] + " se quedara "+ days + " noches")
+    var text_h5=document.createTextNode(persona[0])
+    var cont_p=document.createTextNode("Datos contacto: " + persona[2] + " " + persona[1] + " se quedara "+ days + " noches. "+ valiRoom(persona))
 //========================================================== btn
     var divBtn=document.createElement('div')
     divBtn.classList.add('d-grid')
@@ -48,6 +48,18 @@ function mostraDatos(persona, days){
     cardsCliente.appendChild(gridCards)
 
         
+}
+
+//====================validacion de tipo de habitacion====
+
+function valiRoom(persona){
+    var val=persona[3]
+    if(val == 0){
+        val = "Habitacion sencilla"
+    }else{
+        val= "Habitacion doble"
+    }
+    return val
 }
 
 

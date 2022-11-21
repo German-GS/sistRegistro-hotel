@@ -1,5 +1,6 @@
 import { mostraDatos } from "./cards.js";
 import { calcDays } from "./days.js";
+//import { remCard } from "./funcCard.js";
 
 const button = document.querySelector(".btn") 
 button.addEventListener('click', getData)
